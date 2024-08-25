@@ -8,6 +8,8 @@ import { FooterComponent } from './dashboard/footer/footer.component';
 import { NavbarComponent } from './dashboard/navbar/navbar.component';
 import { ListUsuariosComponent } from './dashboard/list-usuarios/list-usuarios.component';
 import { LayoutComponent } from './layout/layout.component';
+import { CardUsuarioComponent } from './dashboard/list-usuarios/card-usuario/card-usuario.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { LayoutComponent } from './layout/layout.component';
     FooterComponent,
     NavbarComponent,
     ListUsuariosComponent,
-    LayoutComponent
+    LayoutComponent,
+    CardUsuarioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
