@@ -1,23 +1,25 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { UsuarioService } from '../../services/usuario.service';
 
 @Component({
   selector: 'app-list-usuarios',
   templateUrl: './list-usuarios.component.html',
-  styleUrl: './list-usuarios.component.css'
+  styleUrl: './list-usuarios.component.css',
 })
+export class ListUsuariosComponent implements OnInit {
+  private _usuarioService = inject(UsuarioService);
+  loading:boolean = true
+  listUsuarios: any[]=[]
 
-export class ListUsuariosComponent {
-
-private _usuarioService = inject(UsuarioService)
-
-
-
-  getUsuarios(){
-    this._usuarioService.getUsuarios().subscribe(data=>{
-      
-    }
-    )
+  ngOnInit(): void {
+    this.getUsuarios()
   }
 
+  getUsuarios() {
+    this._usuarioService.getUsuarios().subscribe((data) => {
+      console.log(data)
+      this.listUsuarios = data;
+      this.loading = false
+    }); 
+  }
 }

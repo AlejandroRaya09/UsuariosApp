@@ -10,6 +10,7 @@ import { ListUsuariosComponent } from './dashboard/list-usuarios/list-usuarios.c
 import { LayoutComponent } from './layout/layout.component';
 import { CardUsuarioComponent } from './dashboard/list-usuarios/card-usuario/card-usuario.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsuarioComponent } from './dashboard/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     ListUsuariosComponent,
     LayoutComponent,
-    CardUsuarioComponent
+    CardUsuarioComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
