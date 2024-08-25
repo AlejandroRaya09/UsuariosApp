@@ -1,1 +1,21 @@
-<p>usuario works!</p>
+<app-spinner *ngIf="loading"></app-spinner>
+
+<div class="row" *ngIf="!loading">
+    <div class="col-lg-8 offset-lg-2">
+        <div class="card" style="width: 25rem; margin: 0 auto;">
+            <img [src]="imgUrl" alt="foto" class="card-img-top img-thumbnail">
+            <div class="card-body text-center">
+                <h5 class="card-title"> {{ firstName }} </h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Email: {{ email }}</li>
+                    <li class="list-group-item">ID: {{ id }} </li>
+                    <li class="list-group-item">Gender: {{ gender }} </li>
+                    <li class="list-group-item">Status: {{ status }} </li>
+                </ul>
+            </div>
+            <div class="button btn btn-primary btn-block btn-xl" routerLink="/dashboard">
+                Volver
+            </div>
+        </div>
+    </div>
+</div>

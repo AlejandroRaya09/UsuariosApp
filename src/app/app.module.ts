@@ -11,6 +11,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { CardUsuarioComponent } from './dashboard/list-usuarios/card-usuario/card-usuario.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuarioComponent } from './dashboard/usuario/usuario.component';
+import { SpinnerComponent } from './dashboard/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { UsuarioComponent } from './dashboard/usuario/usuario.component';
     ListUsuariosComponent,
     LayoutComponent,
     CardUsuarioComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

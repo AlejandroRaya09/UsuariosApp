@@ -13,6 +13,7 @@ export class CardUsuarioComponent implements OnInit{
   email: string = ''
   id:number = 0
 
+
   ngOnInit(): void {
     console.log(this.user)
     this.firstName = this.user.name
