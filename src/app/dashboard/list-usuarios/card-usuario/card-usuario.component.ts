@@ -11,11 +11,13 @@ export class CardUsuarioComponent implements OnInit{
   imgUrl:string = 'https://cdn-icons-png.flaticon.com/512/1144/1144760.png'
   firstName: string = ''
   email: string = ''
+  id:number = 0
 
   ngOnInit(): void {
     console.log(this.user)
     this.firstName = this.user.name
     this.email = this.user.email
+    this.id = this.user.id
   }
 
 }
